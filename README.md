@@ -74,8 +74,7 @@ java -jar target/petshop-api-0.0.1-SNAPSHOT.jar
 ## 🌐 Acesso à API
 
 - **URL Base:** http://localhost:8081
-- **Swagger UI:** http://localhost:8081/swagger-ui.html (se configurado)
-- **Health Check:** http://localhost:8081/actuator/health
+- **Postman:** https://orange-meadow-196544.postman.co/workspace/petshopAPItest
 
 ## Executando Testes
 

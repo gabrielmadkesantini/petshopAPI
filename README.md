@@ -1,6 +1,6 @@
 # PetShop API - Guia de Instalação e Execução
 
-## 📋 Pré-requisitos
+## Pré-requisitos
 
 ### 1. Java Development Kit (JDK)
 - **Versão necessária:** Java 21
@@ -23,7 +23,7 @@
   - **Senha:** 123
   - **Banco de dados:** pets_db
 
-## 🚀 Instalação e Configuração
+## Instalação e Configuração
 
 ### 1. Clone o Repositório
 ```bash
@@ -35,10 +35,8 @@ cd petshopAPI
 
 #### Criar o banco de dados:
 ```sql
--- Conecte-se ao PostgreSQL como superusuário
-CREATE DATABASE pets_db;
-CREATE USER postgres WITH PASSWORD '123';
-GRANT ALL PRIVILEGES ON DATABASE pets_db TO postgres;
+-- conecte-se ao banco criando o banco com base no arquivo estrutura,db na raiz do projeto
+
 ```
 
 #### Para testes (opcional):
@@ -79,7 +77,7 @@ java -jar target/petshop-api-0.0.1-SNAPSHOT.jar
 - **Swagger UI:** http://localhost:8081/swagger-ui.html (se configurado)
 - **Health Check:** http://localhost:8081/actuator/health
 
-## 🧪 Executando Testes
+## Executando Testes
 
 ### Executar todos os testes:
 ```bash
@@ -96,7 +94,7 @@ mvn test -Dtest=NomeDaClasseTest
 mvn test jacoco:report
 ```
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 src/
@@ -135,26 +133,7 @@ export SPRING_DATASOURCE_PASSWORD=123
 export SERVER_PORT=8081
 ```
 
-## 🐛 Solução de Problemas
-
-### Erro de Conexão com Banco
-- Verifique se o PostgreSQL está rodando
-- Confirme as credenciais no `application.properties`
-- Verifique se o banco `pets_db` existe
-
-### Erro de Porta em Uso
-- Altere a porta no `application.properties`: `server.port=8082`
-- Ou mate o processo usando a porta 8081
-
-### Erro de Java Version
-- Confirme que está usando Java 21: `java -version`
-- Configure JAVA_HOME se necessário
-
-### Problemas com Maven
-- Limpe o cache: `mvn clean`
-- Reinstale dependências: `mvn clean install`
-
-## 📚 Dependências Principais
+## Dependências Principais
 
 - **Spring Boot:** 3.3.4
 - **Spring Security:** Para autenticação e autorização
@@ -164,7 +143,7 @@ export SERVER_PORT=8081
 - **Validation:** Para validação de dados
 - **TestContainers:** Para testes de integração
 
-## 🔐 Autenticação
+## Autenticação
 
 A API utiliza JWT para autenticação. Para obter um token:
 
@@ -176,7 +155,7 @@ curl -X POST http://localhost:8081/api/auth/login \
 
 Use o token retornado no header `Authorization: Bearer <token>` para acessar endpoints protegidos.
 
-## 📝 Logs
+## Logs
 
 Os logs são salvos em:
 - **Console:** Saída padrão
